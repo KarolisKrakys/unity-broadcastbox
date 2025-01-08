@@ -1,3 +1,5 @@
+This Unity project demonstrates how to set up a WebRTC video stream as the background in Unity. It connects to a Broadcast Box using the WHEP endpoint to receive a live video stream.
+
 ## 1. Scene Setup
 
 1. **Add a Plane (or Quad) for Video Display**  
@@ -17,6 +19,10 @@
 
 ---
 
+### Create a C# Script
+Create a script named **WHEPReceiver.cs** and attach it to the **Main Camera** or an **Empty GameObject**.
 
-## 2. Script Setup (WHEP Receiver)
-**Attach the Script** to any GameObject (e.g., the **Main Camera**).  
+### Input Values You Need to Replace
+- **`whepUrl`**: The URL of your Broadcast Box WHEP endpoint (e.g., `https://yourserver.com/api/whep`).
+- **`streamKey`**: The Bearer token or stream key required to authorize access.
+- **`planeRenderer`**: Assign the **Renderer** component of the **VideoScreen** in the **Inspector**.
